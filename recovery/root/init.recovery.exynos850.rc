@@ -1,0 +1,10 @@
+on init
+    write /proc/sys/kernel/hung_task_timeout_secs 0
+
+on fs
+    # Force ANDROID_ROOT to /system_root
+    export ANDROID_ROOT /system_root
+
+    # Symlink bootdevice
+    wait /dev/block/platform/${ro.boot.boot_devices}
+    symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice

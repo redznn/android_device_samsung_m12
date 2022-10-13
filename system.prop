@@ -1,0 +1,12 @@
+# Device release name
+ro.display.series=Samsung Galaxy M12
+
+# Disable Rescue Party
+persist.sys.disable_rescue=true
+
+# For developer info, use ADB to get its property
+sys.usb.controller=13600000.dwc3
+
+# Dynamic partitions
+ro.boot.dynamic_partitions=true
+ro.boot.boot_devices=bootdevice,12100000.dwmmc0
