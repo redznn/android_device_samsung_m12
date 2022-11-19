@@ -33,7 +33,7 @@ vendor      /vendor      ext4  wait,logical,first_stage_mount
 /metadata           ext4         /dev/block/by-name/metadata          flags=backup=1;display="Metadata";wipeingui;wrappedkey
 
 # EFS/Modem/Non-volatile storage mount point
-/efs                ext4         /dev/block/by-name/sec_efs              flags=backup=1;display="EFS"
+/efs                ext4         /dev/block/by-name/efs              flags=backup=1;display="EFS"
 /sec_efs            ext4         /dev/block/by-name/sec_efs           flags=backup=1;display="Sec EFS";subpartitionof=/efs
 
 # SD Card & USB-OTG Points
