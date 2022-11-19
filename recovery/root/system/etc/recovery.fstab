@@ -3,5 +3,5 @@ vendor                                         /vendor              ext4    ro,b
 product                                        /product             ext4    ro,errors=panic          wait,logical,first_stage_mount
 odm                                            /odm                 ext4    ro,errors=panic          wait,logical,first_stage_mount
 
-/dev/block/by-name/userdata                    /data                f2fs    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic      latemount,wait,check,fileencryption=aes-256-xts,reservedsize=128M,quota
+/dev/block/by-name/userdata                    /data                ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic      latemount,wait,check,fileencryption=aes-256-xts,reservedsize=128M,quota
 /dev/block/by-name/misc                        /misc                emmc    defaults       defaults
