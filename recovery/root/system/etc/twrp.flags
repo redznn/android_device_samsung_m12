@@ -30,7 +30,7 @@ vendor      /vendor      ext4  wait,logical,first_stage_mount
 
 # ETC Moint Point
 /cache              ext4         /dev/block/by-name/cache             flags=backup=1;display="Cache";wipeingui
-/metadata           ext4         /dev/block/by-name/medatada          flags=backup=1;display="Metadata";wipeingui;wrappedkey
+/metadata           ext4         /dev/block/by-name/metadata          flags=backup=1;display="Metadata";wipeingui;wrappedkey
 
 # EFS/Modem/Non-volatile storage mount point
 /efs                ext4         /dev/block/by-name/sec_efs              flags=backup=1;display="EFS"
