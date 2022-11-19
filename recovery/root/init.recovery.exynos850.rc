@@ -1,10 +1,10 @@
 on init
     write /proc/sys/kernel/hung_task_timeout_secs 0
 
-on fs
-    # Force ANDROID_ROOT to /system_root
-    export ANDROID_ROOT /system_root
+on late-init
+    setprop ro.debuggable 1
+    setprop service.adb.root 1
+    setprop sys.usb.configfs 1
+    setprop sys.usb.config adb
 
-    # Symlink bootdevice
-    wait /dev/block/platform/${ro.boot.boot_devices}
-    symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
+on boot
