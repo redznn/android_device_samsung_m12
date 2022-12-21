@@ -36,13 +36,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
         export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
         export FOX_USE_LZMA_COMPRESSION=1
-        export OF_DISABLE_UPDATEZIP=1
         export FOX_DELETE_INITD_ADDON=1
         export FOX_VERSION=12.1
         export OF_MAINTAINER=Redznn        
 	export FOX_REMOVE_AAPT=1
         export FOX_DELETE_INITD_ADDON=1
         export FOX_DELETE_MAGISK_ADDON=1
+        export OF_STATUS_H=130
+        export OF_SCREEN_H=2400
 
         lunch twrp_$FDEVICE-eng
         # let's see what are our build VARs
