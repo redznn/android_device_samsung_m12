@@ -44,6 +44,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_DELETE_MAGISK_ADDON=1
         export OF_STATUS_H=130
         export OF_SCREEN_H=2400
+	export OF_FBE_METADATA_MOUNT_IGNORE=1
+	export OF_PATCH_AVB20=1
+        export OF_HIDE_NOTCH=1
+	export FOX_USE_XZ_UTILS=1
 
         lunch twrp_$FDEVICE-eng
         # let's see what are our build VARs
